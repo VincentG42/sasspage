@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+@import './partials/colors';
+
+
+
+html, body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+	color: darken($white, 75%);
+	font-size: 16px;
+}
+
+.logo {
+	position: absolute;
+	font-size: 1.6rem;
+	line-height: 3rem;
+	padding: 10px 4rem;
+
+    span {
+        position: fixed;
+        display: inline-block;
+        top: 10px;
+        left: 10px;
+        color: $darkBlue;
+        background-color: $white;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $darkBlue; 
+    }
+    
+}
+
+
+.btn {
+	border: 1px solid $white;
+	color: $white;
+	padding: 0.5rem 1rem;
+	margin: 0 0.3rem;
+	border-radius: 0.2rem;
+	text-decoration: none; 
+}
+
+.home {
+    @include background-color($clearBlue, $darkBlue);
+
+	min-height: 500px;
+	height: 100vh;
+	padding: 4rem 4rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column; 
+
+    .welcome {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        color: $white; 
+
+        h1 {
+            border-bottom: 2px dotted $white;
+            margin: 0 0 2rem 0;
+            padding: 0 0 2rem 0;
+            font-size: 3rem; 	
+        }
+    }
+
+}
+
+
+.services {
+	padding: 4rem 4rem; 
+
+    h2 {
+        color: $darkBlue;  
+    }
+
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;  
+    }
+
+    .service-block {
+        width: 30%;
+        min-width: 280px;
+        margin: 1.5%;
+        box-sizing: border-box; 
+        
+        h3 {
+            color: $darkBlue;
+            text-align: center;  
+        }
+        .service-img {
+            background-color: darken($white,20%);
+            height: 150px;  
+        }
+    }
+    
+}
+
+.contacts {
+	padding: 4rem 4rem;
+	background-color: darken($white, 10%); 
+    
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;  
+
+        label {
+            margin: 1rem 0;  
+        }
+
+        input, .contacts form textarea {
+            border: 1px solid $darkBlue;
+            padding: 10px;
+            border-radius: 5px;  
+        }
+
+        textarea {
+            height: 15rem;  
+        }
+
+        input:focus,textarea:focus {
+            border: 1px solid$white;
+            padding: 10px;
+            border-radius: 5px;
+            background-color:lighten($darkBlue,5%);
+            // )
+            color: $white;  
+        }
+        input[type="submit"] {
+            background-color: $darkBlue;
+            width: 25%;
+            margin: 1rem auto;  
+        }
+        
+    }
+}
+
+footer {
+	padding: 1rem 4rem;
+	background-color: darken($darkBlue, 15%);
+	color: $darkBlue;
+	text-align: center;
+	font-size: 0.8rem;  
+}

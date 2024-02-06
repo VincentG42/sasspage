@@ -1,0 +1,14 @@
+$clearBlue :#00c1db;
+
+$darkBlue:#008da0;
+
+$white:#fff;
+
+
+@mixin background-color($col1, $col2){
+    background: $col1;
+	background: -moz-radial-gradient(center, ellipse cover, $col1 0%, $col2 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, $col1 0%, $col2 100%);
+	background: radial-gradient(ellipse at center, $col1 0%, $darkBlue 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col1', endColorstr='$col2',GradientType=1 );
+}

@@ -1,6 +1,6 @@
 /*  #00c1db et #008da0. */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
 *{
     font-family: 'Raleway', sans-serif;
@@ -12,28 +12,30 @@
 
 /*  logo */
 .logo{
-    background-color: #00c1db;
-    
+    position: absolute;
+    padding: 1.3em 3.5em;
+    font-size:24px;  
 }
 
 .logo span{
     position: fixed;
-    z-index: 100;
+	display: inline-block;
+    top: 20px;
+	left: 20px;
     font-size: 24px;
     color: #00c1db;
     background-color: white;
     border: 1px #00c1db solid;
     border-radius: 50%;
-    padding: 15px;
+    padding: 12px;
 }
 
 
 /* home */
 .home{
-    background-color: #00c1db;
+    background:radial-gradient( #00c1db, #008da0);
     color: white;
-    height: 95vh;
-    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,18 +43,134 @@
 
 
 }
+.welcome{
+    width: 90%;
+}
 
 h1{
     font-size: 48px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    position: relative;
+    font-weight:bolder;
+    padding-bottom: 40px;
+    border-bottom:2px dotted white;
 }
 
-h1::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 85%;
-    border-bottom:2 px dotted white;
+.welcome p:first-of-type{
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
+
+.btn{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-light{
+    margin: 0 3px;
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 8px 12px;
+}
+
+
+
+
+/* services */
+#services{
+    padding: 5em;
+}
+
+#services h2, h3{
+    color:#008da0 ;
+}
+#services h2{
+    margin: 0 -1em;
+}
+
+#services>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.service-block{
+    width: 30%;
+	min-width: 280px;
+	margin: 1.5%;
+	box-sizing: border-box;
+}
+.service-block h3{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.service-img{
+    width: 90%;
+    height: 10em;
+    background-color: #ccc;
+	height: 150px;  
+    margin:20px 0;
+}
+
+/* contacts */
+#contacts{
+    background-color: #ccc;
+    padding: 3em;
+}
+
+#contacts h2{
+    margin: 2em 4em;
+}
+
+#contacts form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+
+}
+#contacts form label{
+    width: 90%;
+    text-align: start;
+}
+#contacts form input{
+    height: 3em;
+    width: 90%;
+    border:#008da0 solid 1px;
+    border-radius: 5px;
+}
+
+#contacts form textarea{
+    height: 15em;
+    width: 90%;
+    border:#008da0 solid 1px;
+    border-radius: 5px;
+
+}
+.contacts form input:focus, .contacts form textarea:focus {
+    border: 1px solid white;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #00a3ba;
+    color: white;
+}
+
+#contacts form .btn{
+    width:25%;
+    background-color:#008da0 ;
+    border-radius: 5px;
+}
+
+
+/* footer */
+footer{
+    height: 3.5em;
+    background-color:#02535e ;
+    font-size: 12px;
+    color: #008da0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
